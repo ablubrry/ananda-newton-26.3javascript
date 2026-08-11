@@ -1,0 +1,33 @@
+body {
+    background-color: bisque;
+    font-family: Georgia;
+    color: darkseagreen;
+    padding: 0px;
+    margin: 120px;
+}
+h1 {
+    color: darkgreen;
+    text-align: center;
+    font-family: geneva;
+}
+p {
+    color: darkolivegreen;
+    font-family: fantasy;
+}
+#Experience {
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 1px solid #00370c;
+}
+#Experience ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+#Connect ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding:0;
+}
