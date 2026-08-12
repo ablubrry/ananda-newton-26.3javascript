@@ -1,7 +1,7 @@
 body {
     background-color: bisque;
     font-family: Georgia;
-    color: darkseagreen;
+    color: darkolivegreen;
     padding: 0px;
     margin: 120px;
 }
@@ -17,7 +17,7 @@ p {
 #Experience {
     padding: 20px;
     margin-bottom: 50px;
-    border: 1px solid #00370c;
+    border: 1px solid greenyellow;
 }
 #Experience ul {
     display: flex;
@@ -26,8 +26,9 @@ p {
     padding: 0;
 }
 #Connect ul {
-    display: flex;
-    gap: 16px;
-    list-style: none;
-    padding:0;
+    display: block;
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid greenyellow;
 }
