@@ -8,11 +8,15 @@ body {
 h1 {
     color: darkgreen;
     text-align: center;
-    font-family: geneva;
+    font-family: fantasy;
+}
+h3 {
+    color: darkolivegreen;
+    font-family: Times New Roman;
 }
 p {
     color: darkolivegreen;
-    font-family: fantasy;
+    font-family: Times New Roman;
 }
 #Experience {
     padding: 20px;
@@ -26,9 +30,23 @@ p {
     padding: 0;
 }
 #Connect ul {
-    display: block;
-    width: 100px;
-    height: 35px;
-    padding: 5px;
-    border: 2px solid greenyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#Connect a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    background-color: azure;
+    border: 1px solid greenyellow;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
 }
