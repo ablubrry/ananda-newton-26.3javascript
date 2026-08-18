@@ -1,0 +1,97 @@
+body {
+    background-color: bisque;
+    font-family: Georgia;
+    color: darkolivegreen;
+    padding: 0px;
+    margin: 120px;
+}
+h1 {
+    color: darkgreen;
+    text-align: center;
+    font-family: fantasy;
+}
+h3 {
+    color: darkolivegreen;
+    font-family: Times New Roman;
+}
+p {
+    color: darkolivegreen;
+    font-family: Times New Roman;
+}
+#Experience {
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 1px solid greenyellow;
+}
+#Experience ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#Experience li {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border: 1px solid greenyellow;
+    border-radius: 8px;
+    padding: 16px;
+}
+#Experience .job-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid greenyellow;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+#Experience .company-name {
+    margin: 0;
+    font-size: 1.1rem;
+    color: greenyellow;
+}
+#Experience .job-dates {
+    font-size: 0.875rem;
+    color: darkolivegreen;
+    font-weight: 500;
+}
+#Experience .job-title {
+    margin: 0;
+    font-weight: 600;
+    color: darkolivegreen;
+}
+#Connect ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#Connect a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    background-color: azure;
+    border: 1px solid greenyellow;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+#Connect li {
+    display: flex;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 160px;
+}
+#Connect a:hover {
+    background-color: azure;
+    border-color: greenyellow;
+    color: aliceblue;
+    transform: translateY(-2px);
+}
