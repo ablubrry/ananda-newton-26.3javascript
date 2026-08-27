@@ -95,3 +95,9 @@ p {
     color: aliceblue;
     transform: translateY(-2px);
 }
+#Skills ul {
+    display: flex;
+    gap:20px;
+    list-style: none;
+    padding: 0;
+}
