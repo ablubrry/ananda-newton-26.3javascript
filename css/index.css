@@ -92,7 +92,7 @@ p {
 #Connect a:hover {
     background-color: azure;
     border-color: greenyellow;
-    color: aliceblue;
+    color:darkolivegreen;
     transform: translateY(-2px);
 }
 #Skills ul {
@@ -129,9 +129,9 @@ textarea {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  border: 1px solid #ccc;
+  border: 1px solid greenyellow;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: azure;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   
 
@@ -141,7 +141,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #00cc52;
+  border-color: greenyellow;
   box-shadow: 0 0 0 3px rgba(36, 11, 255, 0.2);
 }
 
@@ -159,10 +159,10 @@ input[type="submit"] {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #ffcaa1;
+  color: darkolivegreen;
   background-color: azure;
   border: greenyellow;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   touch-action: manipulation; 
   transition: background-color 0.2s ease, transform 0.1s ease;
@@ -170,10 +170,32 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-  background-color: #a9ffcd;
+  background-color: dar;
 }
 
 button:active,
 input[type="submit"]:active {
   transform: scale(0.98); 
 }
+
+#Projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+#Projects li {
+    background-color: azure;
+    border: 1px solid greenyellow;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    flex: 1 1 calc(50% - 1rem);
+    box-sizing: border-box;
+    font-weight: 500;
+    color: darkolivegreen;
+   
+}
+
