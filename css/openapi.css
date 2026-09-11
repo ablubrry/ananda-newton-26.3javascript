@@ -1,0 +1,37 @@
+#Art-Explorer h2 {
+margin-top: 0;
+color: darkolivegreen;
+border-bottom: none;
+padding-bottom: 0.5rem;
+display: inline-block;
+}
+.api-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+.api-controls button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: darkolivegreen;
+    background-color: azure;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1 ease;
+}
+.api-controls button:hover {
+    background-color: bisque;
+    transform: translateY(-1px);
+}
+.api-controls button:active {
+    transform: translateY(0);
+}
+#display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    min-height: 80px;
+}
