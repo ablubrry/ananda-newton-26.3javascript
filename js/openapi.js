@@ -5,13 +5,14 @@ function fetchArtworks() {
         .then(response => response.json())
         .then(data => {
             let artworks = data.data;
-            display.innerHTML = "";
-            artworks.forEach(art => {
-                display.innerHTML += `<p>${art.title}</p>`;
-            });
+            // Build the HTML string first, then update DOM once
+            display.innerHTML = artworks
+                .map(art => `<p>${art.title || "Untitled"}</p>`)
+                .join("");
         })
         .catch(error => {
-            display.innerHTML = "<p>Something went wrong.</p>";
+            console.error("Artworks fetch error:", error);
+            display.innerHTML = "<p>Something went wrong loading artworks.</p>";
         });
 }
 
@@ -20,15 +21,17 @@ function fetchArtists() {
         .then(response => response.json())
         .then(data => {
             let artists = data.data;
-            display.innerHTML = "";
-            artists.forEach(artist => {
-                display.innerHTML += `<p>${artist.title}</p>`;
-            });
+            // Use artist.title with artist.name fallback in case records vary
+            display.innerHTML = artists
+                .map(artist => `<p>${artist.title || artist.name || "Unknown Artist"}</p>`)
+                .join("");
         })
         .catch(error => {
-            display.innerHTML = "<p>Something went wrong.</p>";
-        })
+            console.error("Artists fetch error:", error);
+            display.innerHTML = "<p>Something went wrong loading artists.</p>";
+        });
 }
+
 document
     .getElementById("btn-artworks")
     .addEventListener("click", fetchArtworks);
