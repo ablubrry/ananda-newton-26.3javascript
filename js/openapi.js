@@ -5,7 +5,6 @@ function fetchArtworks() {
         .then(response => response.json())
         .then(data => {
             let artworks = data.data;
-            // Build the HTML string first, then update DOM once
             display.innerHTML = artworks
                 .map(art => `<p>${art.title || "Untitled"}</p>`)
                 .join("");
@@ -21,7 +20,7 @@ function fetchArtists() {
         .then(response => response.json())
         .then(data => {
             let artists = data.data;
-            // Use artist.title with artist.name fallback in case records vary
+            
             display.innerHTML = artists
                 .map(artist => `<p>${artist.title || artist.name || "Unknown Artist"}</p>`)
                 .join("");
@@ -39,3 +38,42 @@ document
 document
     .getElementById("btn-artists")
     .addEventListener("click", fetchArtists);
+
+function fetchGithub() {
+  const container = document.getElementById('repo-list');
+
+  fetch("https://api.github.com/users/ablubrry/repos")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(repos => {
+      container.innerHTML = ''; 
+
+      repos.forEach(repo => {
+        const repoItem = document.createElement('div');
+        repoItem.className = 'repo-item';
+
+        const link = document.createElement('a');
+        link.href = repo.html_url;
+        link.target = '_blank';
+        link.textContent = repo.name;
+
+        const description = document.createElement('p');
+        description.textContent = repo.description || 'Current and previous projects.';
+
+        repoItem.appendChild(link);
+        repoItem.appendChild(description);
+        container.appendChild(repoItem);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching repositories:', error);
+      container.textContent = 'Failed to load repositories.';
+    });
+}
+
+
+fetchGithub();
