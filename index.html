@@ -7,6 +7,7 @@
     <meta name="description" content="A webpage with facts">
     <title>My Web Page</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/openapi.css">
 </head>
 <body>
     <nav>
@@ -15,8 +16,8 @@
         <a href="#Connect">Connect</a>
         <a href="#Skills">Skills</a>
         <a href="#Projects">Projects</a>
+        <a href="index.html">Portfolio</a>
     </nav>
-    
     <h1>Ananda Newton</h1>
     <section id="About">
         <h2>About</h2>
@@ -50,6 +51,14 @@
         <ul></ul>
     </section>
     
+    <section id="Art-Explorer">
+        <h2>Art Explorer</h2>
+        <div class="api-controls">
+            <button id="btn-artworks">Browse Artworks</button>
+            <button id="btn-artists"> Browse Artists</button>
+        </div>
+        <div id="display"></div>
+    </section>
     <section id="Connect">
         <h2>Connect</h2>
     <ul> 
@@ -64,9 +73,7 @@
     
     <section id="Projects">
         <h2>Projects</h2>
-        <ul>
-
-        </ul>
+        <ul id="repo-list"> Loading repositories...</ul>
     </section>
     <section id="messages">
         <ul> </ul>
@@ -85,6 +92,7 @@
         </form>
     </section>
     <footer></footer>
+     <script src="js/openapi.js"></script>
     <script src="js/index.js"> </script>
 </body>
 </html>
